@@ -12,13 +12,13 @@ class FrontController extends Controller
     }
     public function show($name)
     {
-      retunr view('frontend.curso');
+      return view('frontend.curso');
     }
     public function work()
     {
       return view('frontend.work-with-us');
     }
-    public function login($datos)
+    public function login()
     {
       return view('frontend.login');
     }
