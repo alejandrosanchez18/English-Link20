@@ -26,4 +26,8 @@ class FrontController extends Controller
     {
       return view('frontend.logout');
     }
+    public function register()
+    {
+      return view('frontend.register');
+    }
 }

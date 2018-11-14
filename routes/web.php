@@ -10,3 +10,4 @@ Route::get('curso/{name?}', 'FrontController@show');
 Route::get('work-with-us', 'FrontController@work');
 Route::get('login', 'FrontController@login');
 Route::post('logout', 'FrontController@logout');
+Route::get('register', 'FrontController@register');
