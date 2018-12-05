@@ -15,9 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'first_name', 'email', 'password', 'last_name', 'dni', 'tel'
-    ];
+     protected $guarded = [];
+    // protected $fillable = [
+    //     'first_name', 'email', 'password', 'last_name', 'dni', 'tel', 'role', 'adress'
+    // ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -30,13 +31,13 @@ class User extends Authenticatable
 
 
     public function courses(){
-          $this->belongsToMany(Couse::class);
+          return $this->belongsToMany(Course::class);
    }
    public function payments(){
-         $this->hasMany(Payment::class);
+        return $this->hasMany(Payment::class);
   }
   public function grades(){
-        $this->hasMany(Grade::class);
+       return $this->hasMany(Grade::class);
 }
 
 }

@@ -15,3 +15,20 @@ Route::get('work-with-us', 'FrontController@work');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Profesores
+Route::post('/addteacher', 'TeacherController@add')->name('addteacher');
+Route::get('/teachers', 'TeacherController@show');
+
+// Cursos Vistas
+Route::post('/addcourse', 'CourseController@add')->name('addcourse');
+Route::get('/courses', 'CourseController@show');
+
+// Alumnos
+Route::get('/students', 'Controller@studentList');
+
+
+// Cursos Vistas
+Route::post('/addgrade', 'GradeController@add')->name('addgrade');
+Route::get('/grades', 'GradeController@show');
