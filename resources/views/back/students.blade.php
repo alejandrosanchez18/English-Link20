@@ -26,7 +26,10 @@
       <td>{{ $student->email }}</td>
       <td>{{ $student->adress }}</td>
       <td>{{ $student->tel }}</td>
-      <td>{{ $student->course->name }}</td>
+      @foreach ($student->courses as $course)
+            <td>{{ $course->name }}</td>
+
+      @endforeach
 
 
 @endforeach

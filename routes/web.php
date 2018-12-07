@@ -26,7 +26,7 @@ Route::post('/addcourse', 'CourseController@add')->name('addcourse');
 Route::get('/courses', 'CourseController@show');
 
 // Alumnos
-Route::get('/students', 'Controller@studentList');
+Route::get('/students', 'StudentController@studentList');
 
 
 // Cursos Vistas

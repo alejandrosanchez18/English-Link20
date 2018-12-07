@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Course;
 
 class TeacherController extends Controller
 {
@@ -15,6 +16,7 @@ class TeacherController extends Controller
    }
    public function show(){
       $teachers = User::where('role', 2)->get();
-      return view('back.teachers', compact('teachers'));
+      $courses = Course::all();
+      return view('back.teachers', compact('teachers', 'courses'));
   }
 }

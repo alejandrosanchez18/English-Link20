@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+<div class="container">
+
 
 <form action="{{ route('addcourse') }}" method="POST">
       @csrf
@@ -29,18 +31,31 @@
 
             <div class="form-group">
                <label for="exampleFormControlSelect1" >Profesores</label>
-               <select class="form-control" id="exampleFormControlSelect1" name="user_id">
+               <select class="form-control" id="exampleFormControlSelect1" name="teacher_id">
                      @foreach ($teachers as $teacher)
                            <option value="{{$teacher->id}}">{{ $teacher->first_name . ' ' . $teacher->last_name }}</option>
 
                      @endforeach
 
                </select>
-               @if ($errors->has('user_id'))
+               @if ($errors->has('teacher_id'))
                    <p class="warning">
-                       {{ $errors->first('user_id') }}
+                       {{ $errors->first('teacher_id') }}
                    </p>
                @endif
+
+               <div class="form-group">
+            <label>Alumnos</label>
+            <div class="row">
+                @foreach ($students as $student)
+                    <div class="col-xs-4">
+                        <label for="{{$student->last_name}}">{{$student->last_name}}</label>
+                        <input id="{{$student->last_name}}" type="checkbox" name="users[]" value="{{$student->id}}">
+                    </div>
+                @endforeach
+            </div>
+
+        </div>
              </div>
 
 
@@ -81,7 +96,7 @@
       <td>{{ $course->description }}</td>
       <td>{{ $course->price }}</td>
       @foreach ($teachers as $teacher)
-            @if($teacher->id == $course->user_id)
+            @if($teacher->id == $course->teacher_id)
                   <td>{{$teacher->first_name}}</td>
             @endif
       @endforeach
@@ -92,3 +107,4 @@
 @endforeach
 </tbody>
 </table>
+</div>

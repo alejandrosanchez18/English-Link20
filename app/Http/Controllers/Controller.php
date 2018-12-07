@@ -13,11 +13,5 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function studentList(){
-          $students = User::where('role', 3)->get();
-          // $student = User::find(1);
-
-
-          return view('back.students', compact('students'));
-   }
+   
 }

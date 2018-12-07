@@ -1,48 +1,40 @@
-<h1>Prueba</h1>
-<h2>hola</h2>
-{{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 
-<form action="{{ route('addcourse') }}" method="POST">
+<form action="{{ route('addgrade') }}" method="POST">
       @csrf
-            <h2>Agregar Curso:</h2>
+            <h2>Agregar Nota:</h2>
 
-            <input type="text" name="name" placeholder="Nombre" value="{{ old('name') }}" required>
-            @if ($errors->has('name'))
-                <p class="warning">
-                    {{ $errors->first('name') }}
-                </p>
-            @endif
-
-
-            <input type="text" name="description" placeholder="Descripcion" value="{{ old('descripcion') }}" required>
-            @if ($errors->has('description'))
-                <p class="warning">
-                    {{ $errors->first('description') }}
-                </p>
-            @endif
-            <input type="number" name="price" placeholder="Descripcion" value="{{ old('price') }}" required>
-            @if ($errors->has('price'))
-                <p class="warning">
-                    {{ $errors->first('price') }}
-                </p>
-            @endif
-
+            <input type="text" name="term" placeholder="term" value="{{ old('term') }}" required>
+            <input type="text" name="paper1" placeholder="paper1" value="{{ old('paper1') }}" required>
+            <input type="text" name="paper2" placeholder="paper2" value="{{ old('paper2') }}" required>
+            <input type="text" name="paper3" placeholder="paper3" value="{{ old('paper3') }}" required>
+            <input type="text" name="paper4" placeholder="paper4" value="{{ old('paper4') }}" required>
+            <textarea type="text" name="description" placeholder="description" value="{{ old('description') }}" required></textarea>
 
             <div class="form-group">
-               <label for="exampleFormControlSelect1" >Profesores</label>
-               <select class="form-control" id="exampleFormControlSelect1" name="user_id">
-                     @foreach ($teachers as $teacher)
-                           <option value="{{$teacher->id}}">{{ $teacher->first_name . ' ' . $teacher->last_name }}</option>
+               <label for="courses" >Cursos</label>
+               <select class="form-control" id="courses" name="course_id">
+                     @foreach ($courses as $course)
+                           <option value="{{$course->id}}">{{ $course->id . ' ' . $course->name}}</option>
 
                      @endforeach
 
                </select>
-               @if ($errors->has('user_id'))
-                   <p class="warning">
-                       {{ $errors->first('user_id') }}
-                   </p>
-               @endif
+
+             </div>
+
+
+
+             <div class="form-group">
+               <label for="students" >Alumnos</label>
+               <select class="form-control" id="students" name="user_id">
+                     @foreach ($students as $student)
+                           <option value="{{$student->id}}">{{ $student->first_name . ' ' . $student->last_name}}</option>
+                     @endforeach
+
+               </select>
              </div>
 
 
@@ -58,13 +50,14 @@
 
 
 
-      <input type="submit" value="Registrarme">
+
+      <input type="submit" value="Enviar">
 </form>
 
 
 
 
-
+{{--
 <table class="table">
 <thead>
   <tr>
@@ -93,4 +86,4 @@
 
 @endforeach
 </tbody>
-</table> --}}
+</table>  --}}

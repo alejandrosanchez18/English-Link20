@@ -50,7 +50,7 @@
 
             <input type="hidden" name="role" value="2">
 
-            <input type="password" name="password_confirmation" placeholder="Re-ingresar contraseña" required>
+            {{-- <input type="password" name="password_confirmation" placeholder="Re-ingresar contraseña" required> --}}
 
       <input type="submit" value="Registrarme">
 </form>
@@ -77,7 +77,12 @@
       <td>{{ $teacher->last_name }}</td>
       <td>{{ $teacher->email }}</td>
       <td>{{ $teacher->numero }}</td>
-      {{-- <td>{{ $teacher }}</td> --}}
+      @foreach ($courses as $course)
+            @if($teacher->id == $course->teacher_id)
+                  <td>{{$course->name}}</td>
+            @endif
+      @endforeach
+
     </tr>
 
 

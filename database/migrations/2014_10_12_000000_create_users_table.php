@@ -23,9 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('adress')->nullable();
-            $table->string('dni', 10)->index();
-            $table->string('tel', 20);
-            $table->smallInteger('role')->default(3);
+            $table->string('dni', 10)->nullable()->index();
+            $table->string('tel', 20)->nullable();
             $table->smallInteger('image_id')->nullable()->unsigned();
         });
     }
