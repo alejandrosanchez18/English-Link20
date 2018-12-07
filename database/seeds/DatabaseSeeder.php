@@ -16,7 +16,11 @@ class DatabaseSeeder extends Seeder
         // Llamar User Seeder. Teacher y Admin
         $this->call(UserTableSeeder::class);
         // php artisan db:seed
-        factory(App\User::class, 40)->create();
+        factory(App\User::class, 40)->create()->each(function($user) {
+             $role = App\Role::where('id', 3)->first();
+             $user->roles()->save($role);
+        });;
+
         factory(App\Course::class, 5)->create();
     }
 }

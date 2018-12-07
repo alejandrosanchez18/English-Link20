@@ -1,11 +1,13 @@
 <?php
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function(){
+      $students = App\User::all();
+      return view('welcome', compact('students'));
+}
+);
 
 
-Route::get('/', 'FrontController@home');
+// Route::get('/', 'FrontController@home');
 Route::get('curso/{name?}', 'FrontController@show');
 Route::get('work-with-us', 'FrontController@work');
 // Route::get('login', 'FrontController@login');
@@ -26,7 +28,7 @@ Route::post('/addcourse', 'CourseController@add')->name('addcourse');
 Route::get('/courses', 'CourseController@show');
 
 // Alumnos
-Route::get('/students', 'StudentController@studentList');
+Route::get('/students', 'StudentController@studentList')->middleware('auth', 'role:admin');
 
 
 // Cursos Vistas
