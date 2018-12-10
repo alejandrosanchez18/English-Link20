@@ -15,7 +15,9 @@ class GradeController extends Controller
 
    }
    public function show(){
-         $students = User::where('role', 3)->get();
+         $students = User::whereHas('roles', function($query){
+         $query->where('name', 'student');
+         })->get();
          $courses = Course::all();
          return view('back.grades', compact('students', 'courses'));
       }

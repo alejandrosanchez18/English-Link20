@@ -26,11 +26,27 @@ Route::get('/teachers', 'TeacherController@show');
 // Cursos Vistas
 Route::post('/addcourse', 'CourseController@add')->name('addcourse');
 Route::get('/courses', 'CourseController@show');
+Route::get('/courses/{id?}', 'CourseController@edit');
+
+// Cursos PopUp Edit, Add, Delete
+ Route::post('addCourse','CourseController@addCourse');
+ Route::post('editCourse','CourseController@editCourse');
+ Route::post('deleteCourse','CourseController@deleteCourse');
+
+
+
+
+
+
+
+
+
+
 
 // Alumnos
 Route::get('/students', 'StudentController@studentList')->middleware('auth', 'role:admin');
 
 
-// Cursos Vistas
+// Notas  Vistas
 Route::post('/addgrade', 'GradeController@add')->name('addgrade');
 Route::get('/grades', 'GradeController@show');

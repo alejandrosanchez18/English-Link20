@@ -15,7 +15,9 @@ class TeacherController extends Controller
 
    }
    public function show(){
-      $teachers = User::where('role', 2)->get();
+         $teachers = User::whereHas('roles', function($query){
+         $query->where('name', 'teacher');
+         })->get();
       $courses = Course::all();
       return view('back.teachers', compact('teachers', 'courses'));
   }

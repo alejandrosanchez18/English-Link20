@@ -10,12 +10,10 @@ use App\Role;
 class StudentController extends Controller
 {
       public function studentList(){
-            $students = User::with(['roles' => function ($query) {
 
-    $querty = $query->where('name', 'student');
-    dd($query);
-     //donde name es la columna de la tabla rol
-}])->get();
+      $students = User::whereHas('roles', function($query){
+      $query->where('name', 'student');
+      })->get();
 
 
             return view('back.students', compact('students'));
