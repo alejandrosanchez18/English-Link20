@@ -17,6 +17,6 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('/users', function(){
-      return Datatables::eloquent(App\User::query())->make(true);
-});
+// Route::get('/users', function(){
+//       return Datatables::eloquent(App\User::query())->make(true);
+// });

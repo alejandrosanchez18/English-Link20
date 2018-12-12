@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\ApiResources;
+namespace App\Http\Controllers\API;
 
-use App\Course;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Course;
 
 class CourseController extends Controller
 {
-   //  public function __construct(){
-   //        $this->middleware('auth');
-   // }
     /**
      * Display a listing of the resource.
      *
@@ -38,10 +35,10 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Course  $course
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course)
+    public function show($id)
     {
         //
     }
@@ -50,27 +47,27 @@ class CourseController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Course  $course
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request, $id)
     {
-        $course = Course::find($course->id);
-        $course->description = $request->description;
-        $course->price = $request->price;
-        $course->teacher_id = $request->teacher_id;
-        $course->save();
+         $course = Course::find($id);
+         $course->description = $request->description;
+         $course->price = $request->price;
+         $course->teacher_id = $request->teacher_id;
+         $course->save();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Course  $course
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function destroy($id)
     {
-         $course = Course::find($course->id);
-         $course->delete();
+        $course = Course::find($course->id);
+        $course->delete();
     }
 }

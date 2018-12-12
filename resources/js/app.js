@@ -7,7 +7,14 @@
 
 require('./bootstrap');
 
+
+
+
+
+
+
 window.Vue = require('vue');
+window.Swal = require('sweetalert2');
 
 /**
  * The following block of code may be used to automatically register your
@@ -16,8 +23,12 @@ window.Vue = require('vue');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+Vue.component('my-user-component', require('./components/MyUsersComponent.vue'));
+Vue.component('form-component', require('./components/FormComponent.vue'));
+Vue.component('user-component', require('./components/UserComponent.vue'));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+
+
 
 // const files = require.context('./', true, /\.vue$/i)
 

@@ -18,7 +18,7 @@ class CreateCoursesTable extends Migration
             $table->timestamps();
             $table->string('name')->index();
             $table->text('description');
-            $table->string('price');
+            $table->string('price')->nulleable();
             $table->smallInteger('teacher_id')->nullable();
         });
     }
