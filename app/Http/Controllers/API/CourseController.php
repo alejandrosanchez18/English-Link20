@@ -29,7 +29,9 @@ class CourseController extends Controller
         $course = new Course();
         $course->name = $request->name;
         $course->description = $request->description;
+        $course->price = $request->price;
         $course->save();
+        return $course;
     }
 
     /**
@@ -40,7 +42,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        //
+        return Course::where('id', $id)->with('users')->first();
     }
 
     /**
@@ -67,7 +69,7 @@ class CourseController extends Controller
      */
     public function destroy($id)
     {
-        $course = Course::find($course->id);
+        $course = Course::find($id);
         $course->delete();
     }
 }

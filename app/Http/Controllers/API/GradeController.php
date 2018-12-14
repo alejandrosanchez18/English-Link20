@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Grade;
 
 class GradeController extends Controller
 {
@@ -14,7 +15,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        //
+        return Grade::all();
     }
 
     /**
@@ -25,7 +26,16 @@ class GradeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $grade = new Grade();
+        $grade->course_id = $request->course_id;
+        $grade->user_id = $request->user_id;
+        $grade->term = $request->description;
+        $grade->paper1 = $request->price;
+        $grade->paper2 = $request->teacher_id;
+        $grade->paper3 = $resquest->paper3;
+        $grade->paper4 = $resquest->paper4;
+        $grande->description = $request->description;
+        $grade->save();
     }
 
     /**
@@ -48,7 +58,14 @@ class GradeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $grade = Grade::find($id);
+         $grade->term = $request->description;
+         $grade->paper1 = $request->price;
+         $grade->paper2 = $request->teacher_id;
+         $grade->paper3 = $resquest->paper3;
+         $grade->paper4 = $resquest->paper4;
+         $grande->description = $request->description;
+         $grade->save();
     }
 
     /**
@@ -59,6 +76,7 @@ class GradeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $grade = Grade::find($grade->id);
+        $grade->delete();
     }
 }

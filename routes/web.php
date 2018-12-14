@@ -50,8 +50,7 @@ Route::apiResources([
     'users' => 'API\UserController',
     'payments' => 'API\PaymentController',
     'grades' => 'API\GradeController',
-
-
+    'teachers' => 'API\TeacherController',
 ]);
 
 

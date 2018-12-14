@@ -73,7 +73,7 @@
             },
             deleteUser(index){
                   this.users.splice(index, 1);
-                  toastr.warning('Usuario eliminado')
+                  
             },
 
       },

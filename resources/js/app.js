@@ -23,9 +23,15 @@ window.Swal = require('sweetalert2');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+Vue.component('my-course-component', require('./components/MyCoursesComponent.vue'));
+Vue.component('course-form-component', require('./components/FormCourseComponent.vue'));
+Vue.component('course-component', require('./components/CourseComponent.vue'));
 Vue.component('my-user-component', require('./components/MyUsersComponent.vue'));
 Vue.component('form-component', require('./components/FormComponent.vue'));
 Vue.component('user-component', require('./components/UserComponent.vue'));
+Vue.component('my-teacher-component', require('./components/MyTeacherComponent.vue'));
+Vue.component('teacher-form-component', require('./components/FormTeacherComponent.vue'));
+Vue.component('teacher-component', require('./components/TeacherComponent.vue'));
 
 
 
