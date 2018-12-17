@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Option;
 
-class OptionsTableSeeder extends Seeder
+class OptionTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

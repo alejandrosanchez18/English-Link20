@@ -573,6 +573,11 @@ font-weight: 200;
   padding: 5px;
   border-radius: 10px;
 }
+.course-btn:hover{
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 .lat-grande {
   height: 100%;
   position: absolute;
@@ -610,7 +615,7 @@ overflow:hidden;
   height:150px;
 }
 .course-btn:hover {
-  background-color: #af0425;
+  background-color: #aa0000;
   cursor: pointer;
 
 }
