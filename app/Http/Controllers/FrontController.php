@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Option;
 
 class FrontController extends Controller
 {
@@ -10,9 +11,10 @@ class FrontController extends Controller
     {
       return view('frontend.home');
     }
-    public function show($name)
+    public function show($slug)
     {
-      return view('frontend.curso');
+      $curso = Option::where('slug', $slug)->first();
+      return view('frontend.course', compact('curso'));
     }
     public function work()
     {

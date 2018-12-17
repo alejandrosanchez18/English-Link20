@@ -1,18 +1,18 @@
 <?php
 
-Route::get('/', function(){
-      $students = App\User::all();
-      return view('welcome', compact('students'));
-}
-);
+// Route::get('/', function(){
+//       $students = App\User::all();
+//       return view('welcome', compact('students'));
+// }
+// );
 
 
-// // Route::get('/', 'FrontController@home');
-// Route::get('curso/{name?}', 'FrontController@show');
-// Route::get('work-with-us', 'FrontController@work');
-// // Route::get('login', 'FrontController@login');
-// // Route::post('logout', 'FrontController@logout');
-// // Route::get('register', 'FrontController@register');
+Route::get('/', 'FrontController@home');
+Route::get('course/{name?}', 'FrontController@show');
+Route::get('work-with-us', 'FrontController@work');
+Route::get('login', 'FrontController@login');
+Route::post('logout', 'FrontController@logout');
+Route::get('register', 'FrontController@register');
 //
 Auth::routes();
 //

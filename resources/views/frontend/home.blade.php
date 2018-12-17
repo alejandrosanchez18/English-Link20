@@ -198,7 +198,7 @@
       </div>
       <img class="lat" src="./img/courses/elemento-curso-medio-esq.png" alt="">
       <h3 class="course-tit">Inglés<br> para viajeros</h3>
-      <a class="course-btn" href="courses?c=viajero">Conoce más</a>
+      <a class="course-btn" href="course/viajero">Conoce más</a>
 
     </div>
 
@@ -209,7 +209,7 @@
       </div>
       <img class="lat" src="./img/courses/elemento-curso-medio-esq.png" alt="">
      <h3 class="course-tit small-txt">Exámenes <br>internacionales</h3>
-     <a class="course-btn" href="courses?c=exam">Conoce más</a>
+     <a class="course-btn" href="course/exam">Conoce más</a>
 
 
     </div>
@@ -220,7 +220,7 @@
       </div>
       <img class="lat-grande" src="./img/courses/elemento-curso-grande.png" alt="">
       <h3 class="course-tit big-txt">English <br>Link Kids</h3>
-      <a class="course-btn big-btn" href="courses?c=kids">Conoce más</a>
+      <a class="course-btn big-btn" href="course/kids">Conoce más</a>
     </div>
 
 
@@ -230,7 +230,7 @@
       </div>
       <img class="lat" src="./img/courses/elemento-curso-medio-dir.png" alt="">
       <h3 class="course-tit small-txt">Capacitación <br>In-Company</h3>
-      <a class="course-btn" href="courses?c=company">Conoce más</a>
+      <a class="course-btn" href="course/company">Conoce más</a>
 
     </div>
     <div class="seccion five pos-right">
@@ -239,7 +239,7 @@
       </div>
       <img class="lat" src="./img/courses/elemento-curso-medio-dir.png" alt="">
       <h3 class="course-tit">Cursos de <br> Conversación</h3>
-      <a class="course-btn" href="courses?c=conversacion">Conoce más </a>
+      <a class="course-btn" href="course/conversacion">Conoce más </a>
 
     </div>
     <div class="seccion pos-left inf">
@@ -248,7 +248,7 @@
     </div>
       <img class="lat" src="./img/courses/elemento-curso-inf.png" alt="" >
       <h3 class="course-tit" id="tit-inf">Inglés <br> General</h3>
-      <a class="course-btn" id="btn-inf" href="courses?c=general">Conoce más</a>
+      <a class="course-btn" id="btn-inf" href="course/general">Conoce más</a>
       <div id="contacto"></div>
 
     </div>
@@ -261,28 +261,28 @@
 <div class="fluid-container m-2 d-lg-none mobile-courses">
 <div class="row mb-2">
       <div class="col-6 pr-1" >
-            <a href="courses?c=viajero"><img class="img-fluid" src="img/mobile/viajero.jpg" alt=""></a>
+            <a href="course/viajero"><img class="img-fluid" src="img/mobile/viajero.jpg" alt=""></a>
       </div>
       <div class="col-6 pl-1" >
-            <a href="courses?c=conversacion"><img class="img-fluid" src="img/mobile/conversacion.jpg" alt=""></a>
+            <a href="course/conversacion"><img class="img-fluid" src="img/mobile/conversacion.jpg" alt=""></a>
       </div>
 </div>
 <div class="row mb-2">
       <div class="col">
-            <a href="courses?c=kids"><img class="img-fluid" src="img/mobile/kids.jpg" alt=""></a>
+            <a href="course/kids"><img class="img-fluid" src="img/mobile/kids.jpg" alt=""></a>
       </div>
 </div>
 <div class="row mb-2">
       <div class="col-6 pr-1">
-            <a href="courses?c=exam"><img class="img-fluid" src="img/mobile/exam.jpg" alt=""></a>
+            <a href="course/exam"><img class="img-fluid" src="img/mobile/exam.jpg" alt=""></a>
       </div>
       <div class="col-6 pl-1">
-            <a href="courses?c=company"><img class="img-fluid" src="img/mobile/company.jpg" alt=""></a>
+            <a href="course/company"><img class="img-fluid" src="img/mobile/company.jpg" alt=""></a>
       </div>
 </div>
 <div class="row">
       <div class="col">
-            <a href="courses?c=general"><img class="img-fluid" src="img/mobile/conversacion.png" alt=""></a>
+            <a href="course/general"><img class="img-fluid" src="img/mobile/conversacion.png" alt=""></a>
       </div>
 </div>'
 </div>

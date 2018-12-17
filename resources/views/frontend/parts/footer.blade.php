@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-12 col-md-4">
       <div class="logo-desc">
-        <img class="logo-b" src="./img/logo-b.png" alt="">
+        <img class="logo-b" src="/img/logo-b.png" alt="">
         <p class="foot-desc">La calidad en el aprendizaje es la base de nuestros valores. Únete a nosotros para que tu experiencia de aprendizaje sea inolvidable.</p>
         <!-- <h3>Noticias</h3>
         <p>Recibe las últimas noticias de English Link en tu bandeja de entrada</p>

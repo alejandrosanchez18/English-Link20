@@ -1,29 +1,29 @@
-@extends('fronted/app')
+@extends('frontend/app')
 
 @section('content')
 <main class='main-container'>
 <div class="fluid-container courses-header">
-  <p><?= $courses[$curso]['title'] ?></p>
+  <p><?= $curso->title ?></p>
 </div>
 <div class="container courses-section">
       <div class="">
-            <p><span>Cursos</span> > <?= $courses[$curso]['title'] ?></p>
+            <p><span>Cursos</span> > <?= $curso->title ?></p>
       </div>
       <hr>
 </div>
 <div class="container courses-desc">
-      <p><?= $courses[$curso]['description'] ?></p>
+      <p><?= $curso->info ?></p>
 </div>
 <div class="container mt-5 course-form-info">
       <div class="row">
 
 
       <div class="d-none d-md-block col-md-7">
-            <img src="<?= $curso ?>.jpeg" alt="">
+            <img src="<?= $curso->slug ?>.jpeg" alt="">
       </div>
       <div class="col-md-5 form-back">
             <form class="form-contact" method="post" action='#img-contenedor'>
-                  <?php echo (isset($msg))? $msg : '' ?>
+            @csrf
               <h2 class="form-h2 d-md-none">Completa el formulario para recibir mayor información</h2>
               <div class="form-group">
                 <label for="name">Nombre</label>
