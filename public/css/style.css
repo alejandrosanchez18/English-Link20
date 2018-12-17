@@ -13685,6 +13685,7 @@ input:focus {
   width: 255px;
   z-index: 11;
   position:fixed;
+  margin-top:10px;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
@@ -13899,6 +13900,7 @@ input:focus {
       .navbar.default-layout .navbar-brand-wrapper .navbar-brand img {
         max-width: 100%;
         margin: auto;
+        margin-top:4px;
         vertical-align: middle;
         height:60px;}
     .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini {
